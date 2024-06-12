@@ -25,8 +25,8 @@ public class Main {
                 break;
             case "c":
                 printAnyString("Now you are in a cosine program, read a number and it makes the cosine of that number");
-                int num = leer.nextInt();
-                double cosResult=cosNumber(num);
+                int numcos = leer.nextInt();
+                double cosResult=cosNumber(numcos);
                 printAnyString("The cosine of that number is " + cosResult);
                 break;
         }
@@ -42,8 +42,9 @@ public class Main {
     public static void printPhrase(String phrase){
         System.out.println(phrase);
     }
-    public static double cosNumber(int num){
-    double cos=Math.cos(num);
+    public static double cosNumber(int numcos){
+        double angleRadians = Math.toRadians(numcos);
+    double cos=Math.cos(angleRadians);
     return cos;
     }
 }
